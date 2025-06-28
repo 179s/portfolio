@@ -109,6 +109,7 @@ a{
 
     font-family: "Roboto Mono";
     color: rgb(var(--l200));
+    font-size: min(1em, 3vw);
 }
 #access .footer a{
     color: rgb(var(--l200));
