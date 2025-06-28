@@ -113,6 +113,10 @@ a{
 }
 #access .footer a{
     color: rgb(var(--l200));
+    transition: color .3s ease;
+}
+#access .footer a:hover{
+    color: rgb(var(--acc));
 }
 #access .bg-filter.hide{
     backdrop-filter: blur(0px);
