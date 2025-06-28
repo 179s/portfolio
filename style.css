@@ -86,17 +86,32 @@ a{
     transition: backdrop-filter .8s ease, opacity .8s ease;
     pointer-events: auto;
 }
-.bg-filter>*{
-    flex: 1;
-}
 .bg-filter>h1{
+    flex: 3;
     display: flex;
     align-items: end;
 }
 .bg-filter>p{
+    flex: 2;
     display: flex;
     align-items: center;
     color: rgb(var(--acc));
+    letter-spacing: 5px;
+}
+#access .footer{
+    flex: 1;
+    width: 90%;
+    padding-block: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    font-family: "Roboto Mono";
+    color: rgb(var(--l200));
+}
+#access .footer a{
+    color: rgb(var(--l200));
 }
 #access .bg-filter.hide{
     backdrop-filter: blur(0px);
