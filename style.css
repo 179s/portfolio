@@ -33,6 +33,7 @@ body{
     background-color: rgb(var(--l200));
     background-image: url("noise.png");
     color: rgb(var(--l100));
+
 }
 
 /*  */
@@ -164,34 +165,28 @@ a{
 #cube>div:nth-of-type(1){
     background-color: rgb(var(--d100));
     transform: translateZ(var(--translate-calc));
-    --shadow-color: rgb(var(--d100));
 }
 #cube>div:nth-of-type(2){
     background-color: rgb(var(--d100));
     transform: translateZ(var(--translate-calc)) rotateY(180deg);
-    --shadow-color: rgb(var(--d100));
 }
 #cube>div:nth-of-type(3){
     background-color: rgb(var(--l100));
     color: rgb(var(--d100));
     transform: translateY(var(--translate-calc)) rotateX(90deg) rotateY(180deg) rotateZ(180deg);
-    --shadow-color: rgb(var(--l100));
 }
 #cube>div:nth-of-type(4){
     background-color: rgb(var(--l100));
     color: rgb(var(--d100));
     transform: translateY(var(--translate-calc)) rotateX(90deg);
-    --shadow-color: rgb(var(--l100));
 }
 #cube>div:nth-of-type(5){
     background-color: rgb(var(--d200));
     transform: translateX(var(--translate-calc)) rotateY(90deg);
-    --shadow-color: rgb(var(--d200));
 }
 #cube>div:nth-of-type(6){
     background-color: rgb(var(--d200));
     transform: translateX(var(--translate-calc)) rotateY(-90deg);
-    --shadow-color: rgb(var(--d200));
 }
 
 #cube.explose{
@@ -551,6 +546,10 @@ a{
 
 .side-wall-right li>a{
     flex: 10;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 
