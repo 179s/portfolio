@@ -210,21 +210,24 @@ a{
     transform: none;
 
     width: 100%; min-height: 100vh;
-    /* background-color: blue; */
     position: relative;
 
     font-size: 1.5vw;
+
+    /* background-color: blue; */
 }
 
 #cube>div>div{
-    background-image: url("noise.png");
     width: 100%; height: 100%;
+    padding: 20px;
+
     position: absolute;
+    perspective: 800px;
 
     display: flex; flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
-    perspective: 800px;
+
+    background-image: url("noise.png");
 }
 
 /* front wall */
@@ -235,23 +238,20 @@ a{
     background-color: rgb(var(--d100));
 }
 
-.front-wall>*{
-    flex: 2;
-}
-
 .front-wall h1{
     flex: 3;
     display: flex; flex-direction: column;
     justify-content: end; align-items: start;
 
     font-size: 6em;
-    font-family: "Notable";
     line-height: .75;
 
     /* background-color: orange; */
 }
 .front-wall p{
+    flex: 2;
     width: 70%;
+
     display: flex;
     align-items: center;
 
@@ -260,6 +260,7 @@ a{
     /* background-color: red; */
 }
 .front-wall div{
+    flex: 2;
     width: 40%;
     margin-left: auto;
 
@@ -288,33 +289,32 @@ a{
 
 /* back wall */
 
-#cube>div .back-wall{
+.back-wall{
     background-color: rgb(var(--d100));
     justify-content: space-evenly;
 }
 
-.back-wall div:nth-of-type(1){
-    font-size: 1em;
-}
-.back-wall h2{
-    font-size: 2em;
-    font-family: "Notable";
+.back-wall .header{
+    flex: 1;
 }
 
 .timeline{
     font-size: .6em;
-    max-height: 500px;
-
+    flex: 10;
     display: flex; flex-direction: column;
+    justify-content: center;
     position: relative;
+}
 
+.timeline .wrapper{
+    height: 500px;
+    padding-left: 10px;
     overflow-y: scroll;
 
-    padding-left: 10px;
     box-shadow: inset 11px 0 0 rgb(var(--d200));
 }
 
-.timeline .entry{
+.timeline .wrapper div{
     display: flex;
     flex-direction: column;
     align-items: start; justify-content: space-between;
@@ -325,7 +325,7 @@ a{
     cursor: ns-resize;
 }
 
-.timeline h3{
+.wrapper div h3{
     width: fit-content;
     padding: 5px 16px;
     
@@ -334,13 +334,13 @@ a{
     background-color: rgb(var(--d200));
 }
 
-.timeline p{
+.wrapper div p{
     padding-block: 4px;
     padding-inline: .5vw;
     margin-left: 1vw;
 
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 
     background-color: rgb(var(--l200));
     color: rgb(var(--d100));
@@ -354,12 +354,7 @@ a{
     color: rgb(var(--l100));
 }
 
-.ceiling>h2{
-    font-family: "Notable";
-    font-size: 2em;
-}
-
-.ceiling>p{
+.ceiling p{
     font-size: 1em;
     font-weight: bold;
 }
@@ -400,11 +395,6 @@ a{
     color: rgb(var(--l100));
 }
 
-.floor>h2{
-    font-family: "Notable";
-    font-size: 2em;
-}
-
 .floor>p{
     font-size: 1em;
     font-weight: bold;
@@ -443,7 +433,6 @@ a{
     justify-content: center; align-items: center;
 
     font-size: 1.8em;
-    font-family: "Notable";
 }
 
 
@@ -516,7 +505,6 @@ a{
 }
 .side-wall-right h2{
     font-size: 2.5em;
-    font-family: "Notable";
 }
 
 .side-wall-right ul{
@@ -564,6 +552,11 @@ a{
     box-shadow: 0 0 10px var(--boxshadow-color);
     background-color: var(--hover-color);
     color: var(--txt-color)
+}
+
+.title{
+    font-size: 2em;
+    font-family: "Notable";
 }
 
 
